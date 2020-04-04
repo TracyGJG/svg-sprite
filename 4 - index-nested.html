@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .halfSize {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Sprite - Nested SVG elements</h1>
+    <h3>Client-side only</h3>
+
+    <h2>Circle</h2>
+    <img src="shapes-nested.svg#circles" />
+
+    <hr>
+    <h2>Triangle</h2>
+    <img src="./shapes-nested.svg#triangles" />
+
+    <hr>
+    <h2>Square</h2>
+    <img class="halfSize" src="./shapes-nested.svg#squares" />
+
+    <hr>
+    <h2>Full image - cropped</h2>
+    <img style="width:400px" src="./shapes-nested.svg#svgView(viewBox(100, 0, 400, 200))" />
+
+</body>
+
+</html>
