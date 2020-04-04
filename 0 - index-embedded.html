@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite</title>
+    <style>
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+
+        .fillRed {
+            fill: #ff0000;
+        }
+
+        .fillGreen {
+            fill: #00ff00;
+        }
+
+        .fillBlue {
+            fill: #0000ff;
+        }
+
+        .halfSize {
+            width: 100px;
+            height: 100px;
+        }
+
+        .strokeBlack {
+            stroke-width: 2px;
+            stroke: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Sprite - Embedded</h1>
+    <h3>Client-side supported</h3>
+
+    <svg style="display: none">
+        <symbol id="circles">
+            <ellipse ry="50" rx="50" cy="50" cx="50" />
+            <ellipse ry="50" rx="50" cy="150" cx="150" />
+        </symbol>
+
+        <symbol id="triangles" viewBox="0 0 200 200">
+            <polygon points="50,0 100,100 0,100" />
+            <polygon points="150,100 200,200 100,200" />
+        </symbol>
+
+        <symbol id="squares" viewBox="0 0 200 200">
+            <rect x="0" y="0" width="100" height="100" />
+            <rect x="100" y="100" width="100" height="100" />
+        </symbol>
+    </svg>
+
+    <h2>Circle - Red</h2>
+    <svg class="fillRed" viewBox="50 50 150 150">
+        <use xlink:href="#circles"></use>
+    </svg>
+
+    <hr>
+    <h2>Triangle - Green</h2>
+    <svg class="fillGreen strokeBlack">
+        <use xlink:href="#triangles"></use>
+    </svg>
+
+    <hr>
+    <h2>Square - Blue</h2>
+    <svg class="fillBlue halfSize">
+        <use xlink:href="#squares"></use>
+    </svg>
+</body>
+
+</html>

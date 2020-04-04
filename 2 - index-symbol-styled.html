@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite</title>
+    <style>
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+
+        .fillRed {
+            fill: #ff0000;
+        }
+
+        .fillGreen {
+            fill: #00ff00;
+        }
+
+        .fillBlue {
+            fill: #0000ff;
+        }
+
+        .halfSize {
+            width: 100px;
+            height: 100px;
+        }
+
+        .strokeBlack {
+            stroke-width: 2px;
+            stroke: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Sprite - Symbol/Svg.Use styled</h1>
+    <h3>Server-side only</h3>
+
+    <h2>Circle - Red cropped</h2>
+    <svg class="fillRed" viewBox="50 50 150 150">
+        <use xlink:href="./shapes-symbol.svg#circles"></use>
+    </svg>
+
+    <hr>
+    <h2>Triangle - Green with black border</h2>
+    <svg class="fillGreen strokeBlack">
+        <use xlink:href="./shapes-symbol.svg#triangles"></use>
+    </svg>
+
+    <hr>
+    <h2>Square - Half-size Blue</h2>
+    <svg class="fillBlue halfSize">
+        <use xlink:href="./shapes-symbol.svg#squares"></use>
+    </svg>
+</body>
+
+</html>

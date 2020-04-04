@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Sprite - Image with Svg.View</h1>
+    <h3>Client-side supported</h3>
+
+    <h2>Full sprite cropped</h2>
+    <img style="width:400px" src="./shapes-view.svg#svgView(viewBox(100, 0, 400, 200))" />
+
+    <hr>
+    <h2>Circle</h2>
+    <img src="./shapes-view.svg#circles" />
+
+    <hr>
+    <h2>Triangle</h2>
+    <img src="./shapes-view.svg#triangles" />
+
+    <hr>
+    <h2>Square</h2>
+    <img src="./shapes-view.svg#squares" />
+</body>
+
+</html>

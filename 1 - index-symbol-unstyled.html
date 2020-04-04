@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite</title>
+    <style>
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Sprite - Symbol/Svg.Use unstyled</h1>
+    <h3>Server-side only</h3>
+
+    <h2>Circle</h2>
+    <svg>
+        <use xlink:href="./shapes-symbol.svg#circles"></use>
+    </svg>
+
+    <hr>
+    <h2>Triangle</h2>
+    <svg>
+        <use xlink:href="./shapes-symbol.svg#triangles"></use>
+    </svg>
+
+    <hr>
+    <h2>Square</h2>
+    <svg>
+        <use xlink:href="./shapes-symbol.svg#squares"></use>
+    </svg>
+</body>
+
+</html>
