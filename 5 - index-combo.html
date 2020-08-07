@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Sprite</title>
     <style>
-        img {
+        img,
+        svg,
+        .svg-background {
             width: 200px;
             height: 200px;
         }
@@ -19,6 +21,26 @@
             width: 100px;
             height: 100px;
         }
+
+        .cropped {
+            width: 300px;
+        }
+
+        .svg-background {
+            display: inline-block;
+        }
+
+        .svg-circles {
+            background-image: url("shapes-combo.svg#svgView(viewBox(200, 0, 200, 200))");
+        }
+
+        .svg-triangles {
+            background-image: url("shapes-combo.svg#svgView(viewBox(400, 0, 200, 200))");
+        }
+
+        .svg-squares {
+            background-image: url("shapes-combo.svg#svgView(viewBox(600, 0, 200, 200))");
+        }
     </style>
 </head>
 
@@ -26,26 +48,36 @@
     <h1>SVG Sprite - Image with Svg.View and Svg.Use</h1>
     <h3>Client-side and server-side</h3>
 
-    <h2>Circle</h2>
+    <h2>Image</h2>
+    <img src="shapes-combo.svg#squares" />
+    <img src="shapes-combo.svg#triangles" />
     <img src="shapes-combo.svg#circles" />
 
     <hr>
-    <h2>Triangle</h2>
-    <img src="./shapes-combo.svg#triangles" />
+    <h2>CSS background</h2>
+    <div class="svg-background svg-squares"></div>
+    <div class="svg-background svg-triangles"></div>
+    <div class="svg-background svg-circles"></div>
 
     <hr>
-    <h2>Square</h2>
-    <img class="halfSize" src="./shapes-combo.svg#squares" />
-
-    <hr>
-    <h2>Full image - cropped</h2>
-    <img style="width:400px" src="./shapes-combo.svg#svgView(viewBox(100, 0, 400, 200))" />
-
-    <hr>
-    <h2>Square SVG - Half-size Blue</h2>
-    <svg class="fillBlue halfSize">
-        <use xlink:href="./shapes-combo.svg#_squares"></use>
+    <h2>SVG</h2>
+    <svg>
+        <use xlink:href="shapes-combo.svg#_squares"></use>
     </svg>
+    <svg>
+        <use xlink:href="shapes-combo.svg#_triangles"></use>
+    </svg>
+    <svg class="fillBlue">
+        <use xlink:href="shapes-combo.svg#_circles"></use>
+    </svg>
+
+    <hr>
+    <h2>Styles SVG</h2>
+    <svg class="fillBlue halfSize">
+        <use xlink:href="shapes-combo.svg#_squares"></use>
+    </svg>
+    <h2>Full image - cropped</h2>
+    <img class="cropped" src="shapes-combo.svg#svgView(viewBox(150, 0, 300, 200))" />
 </body>
 
 </html>
