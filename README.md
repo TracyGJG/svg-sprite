@@ -16,7 +16,7 @@ This was not really an experiment but an exercise to confirm the ground rules. T
 
 In the first experiment we move the sprite to its own file in the same structure as in the previous example. However, this makes the addressing, from within the HTML file, even more complicated and still restricts us to SVG elements, when what we want is to use HTML image elements and CSS background-image styles.
 
-Another slmall negative for this approach is it is server-side only solution.
+Another small negative for this approach is it is server-side only solution.
 
 ## Experiment Two: Symbol (Styled)
 
