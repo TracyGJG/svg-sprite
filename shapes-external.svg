@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="200" viewBox="200 0 800 200">
+    <def>
+        <symbol id="_circles" viewBox="0 0 200 200">
+            <image href="shape-circles.svg"/>
+        </symbol>
+
+        <symbol id="_triangles" viewBox="0 0 200 200">
+            <image href="shape-triangles.svg"/>
+        </symbol>
+
+        <symbol id="_squares" viewBox="0 0 200 200">
+            <image href="shape-squares.svg"/>
+        </symbol>
+    </def>
+
+    <use xlink:href="#_circles" x="0" y="0" />
+    <view id='circles' viewBox='0 0 200 200' />
+
+    <use xlink:href="#_triangles" x="200" y="0" fill="#FF0000" />
+    <view id='triangles' viewBox='200 0 200 200' />
+
+    <use xlink:href="#_squares" x="400" y="0" />
+    <view id='squares' viewBox='400 0 200 200' />
+</svg>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite</title>
+    <style>
+        img,
+        svg,
+        .svg-background {
+            width: 200px;
+            height: 200px;
+        }
+
+        .svg-circles {
+            background-image: url("shapes-external.svg#svgView(viewBox(200, 0, 200, 200))");
+        }
+
+        .svg-triangles {
+            background-image: url("shapes-external.svg#svgView(viewBox(400, 0, 200, 200))");
+        }
+
+        .svg-squares {
+            background-image: url("shapes-external.svg#svgView(viewBox(600, 0, 200, 200))");
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Sprite - Image using external links with Svg.View and Svg.Use</h1>
+    <h3>Server-side only</h3>
+
+    <h2>SVG</h2>
+    <svg>
+        <use xlink:href="shapes-external.svg#_squares"></use>
+    </svg>
+    <svg>
+        <use xlink:href="shapes-external.svg#_triangles"></use>
+    </svg>
+    <svg>
+        <use xlink:href="shapes-external.svg#_circles"></use>
+    </svg>
+</body>
+
+</html>
